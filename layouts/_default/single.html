@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
-</head>
-<body>
-   {{ block "main" .}} 
-    {{ .Content }}
-   {{ end }}
-</body>
-</html>
+{{ define "main" }}
+  {{ if .Params.tags }}
+    {{ range .Params.tags }}
+      {{ if or (eq . "math") (eq . "algorithms") (eq . "computer science") }}
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      <script>
+        MathJax = {
+          tex: {
+            displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+            inlineMath: [['\\(', '\\)'], ['$', '$']],     // inline
+          }
+        };
+      </script>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <a href="/articles">Go back to /articles</a>
+  {{ .Content }}
+{{ end }}

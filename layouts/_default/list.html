@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
-</head>
-<body>
-    {{ .Content }}
-</body>
-</html>
+  {{ define "main" }} 
+   {{ .Content }}
+    <ul>
+        {{ range .Pages }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} | {{ .LinkTitle }}</a>
+        </li>
+        {{ end }}
+    </ul>
+{{ end }}

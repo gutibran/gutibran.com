@@ -1,3 +1,18 @@
 baseURL = 'https://gutibran.com/'
 languageCode = 'en-us'
 title = 'gutibran.com'
+
+
+[markup]
+  [markup.highlight]
+    style = "base16-black-metal-bathory"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['$', '$'], ['\(', '\)']]
+[params]
+  math = true
+
