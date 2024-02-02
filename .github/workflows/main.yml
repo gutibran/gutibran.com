@@ -39,5 +39,5 @@ jobs:
             pdflatex resume.tex
             mv /home/linuxuser/resume/resume.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-resume.pdf
             cd /home/linuxuser/gutibran.com
-            hugo serve -D
+            hugo -D
             sudo nginx -s reload
