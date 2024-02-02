@@ -35,5 +35,8 @@ jobs:
             git fetch origin master
             git reset --hard FETCH_HEAD
             git clean -d -f --exclude secrets
+            cd /home/linuxuser/resume
+            pdflatex resume.tex
+            mv /home/linuxuser/resume/resume.tex /home/linuxuser/gutibran.com/static/brandon-gutierrez-resume.pdf
             hugo -D
             sudo nginx -s reload
