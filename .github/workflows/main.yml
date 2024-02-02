@@ -38,5 +38,6 @@ jobs:
             cd /home/linuxuser/resume
             pdflatex resume.tex
             mv /home/linuxuser/resume/resume.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-resume.pdf
+            cd /home/linuxuser/gutibran.com
             hugo server -D
             sudo nginx -s reload
