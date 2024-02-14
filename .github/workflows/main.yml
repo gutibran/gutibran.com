@@ -37,7 +37,7 @@ jobs:
             git clean -d -f --exclude secrets
             cd /home/linuxuser/resume
             pdflatex resume.tex
-            mv /home/linuxuser/resume/resume.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-resume.pdf
+            mv /home/linuxuser/resume/resume.pdf /home/linuxuser/gutibran.com/static/documents/brandon-gutierrez-resume.pdf
             cd /home/linuxuser/gutibran.com
             hugo -D
             sudo nginx -s reload
