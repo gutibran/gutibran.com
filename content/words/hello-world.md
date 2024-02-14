@@ -12,5 +12,9 @@ Blasting this at night with some caffeinated aspartame flavored drink.
 {{</ rawhtml >}}
 
 {{< rawhtml >}}
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2b96jNljcrpAZ17iKGR5Dz?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+{{</ rawhtml >}}
+
+{{< rawhtml >}}
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Turn your pain into creative technological output.</p>&mdash; Beff Jezos — e/acc ⏩ (@BasedBeffJezos) <a href="https://twitter.com/BasedBeffJezos/status/1742825630323085416?ref_src=twsrc%5Etfw">January 4, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 {{</ rawhtml >}}
