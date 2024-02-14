@@ -4,7 +4,7 @@ title: 'Index'
 layout: "index-single"
 ---
 
-Hello, world. My name is Brandon Gutierrez. I enjoy working with computers and using computers. I am employed at Nvidia as a System Software Engineer and am studying Electrical Engineering & Applied Mathematics at Texas State University in San Marcos, Texas. If you would like to contact me, you can find me on most mainstream social networks such as LinkedIn, Twitter, GitHub, Instagram, and Youtube, TikTok, etc. under the handle "gutibran" or some slight variant of "gutibran" to send me a message. Links are provided down below for your convenience. Alternatively, you can contact me via email by sending your message to bran@gutibran.com. If you are based use my [public GPG key](/documents/brandon-gutierrez-gpg-key.txt) to encrypt your email. It is ok if you are not based, but you should educate yourself and become a based and competent computer person. You can view my current resume [here](/documents/brandon-gutierrez-resume.pdf). Lastly, I share my notes and thoughts [here](/words) if you are interested in reading them. I write about things I am learning and building across the realms of computer science, mathematics, software engineering, software development, IT, etc.
+Hello, world. My name is Brandon Gutierrez. I enjoy working with computers and using computers. I am employed at Nvidia as a System Software Engineer and am studying Electrical Engineering & Applied Mathematics at Texas State University in San Marcos, Texas. If you would like to contact me, you can find me on most mainstream social networks such as LinkedIn, Twitter, GitHub, Instagram, and Youtube, TikTok, etc. under the handle "gutibran" or some slight variant of "gutibran" to send me a message. Links are provided down below for your convenience. Alternatively, you can contact me via email by sending your message to bran@gutibran.com. If you are based use my [public GPG key](/documents/brandon-gutierrez-gpg-key.txt) to encrypt your email. It is ok if you are not based, but you should educate yourself and become a based and competent computer person. You can view my current résumé [here](/documents/brandon-gutierrez-résumé.pdf). Lastly, I share my notes and thoughts [here](/words) if you are interested in reading them. I write about things I am learning and building across the realms of computer science, mathematics, software engineering, software development, IT, etc.
 
 {{< rawhtml >}}
 <ul>
@@ -15,8 +15,9 @@ Hello, world. My name is Brandon Gutierrez. I enjoy working with computers and u
         </a>
     </li>
     <li>
-        <a href="/documents/brandon-gutierrez-resume.pdf" target="_blank">
-            <img src="/icons/file.png" alt="resume-icon" >
+        <a href="/documents/brandon-gutierrez-résumé.pdf" target="_blank">
+            <img src="/icons/file.png" alt="résumé-icon" >
+            <span>Resume</span>
         </a>
     </li>
     <li>
