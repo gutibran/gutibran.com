@@ -17,72 +17,85 @@ Hello, world. My name is Brandon Gutierrez. I enjoy working with computers and u
     <li>
         <a href="/documents/brandon-gutierrez-résumé.pdf" target="_blank">
             <img src="/icons/file.png" alt="résumé-icon" >
-            <span>Resume</span>
+            <span>Résumé</span>
         </a>
     </li>
     <li>
         <a href="https://www.linkedin.com/in/gutibran" target="_blank">
             <img src="/icons/linkedin.png" alt="linkedin-logo" />
+            <span>LinkedIn</span>
         </a>
     </li>
     <li>
         <a href="https://twitter.com/gutibran" target="_blank">
             <img src="/icons/twitter.png" alt="twitter-logo" />
+            <span>Twitter (X)</span>
         </a>
     </li>
     <li>
         <a href="https://github.com/gutibran" target="_blank">
             <img src="/icons/github.png" alt="github-logo" />
+            <span>GitHub</span>
         </a>
     </li>
     <li>
         <a href="https://www.instagram.com/gutibran_/" target="_blank">
             <img src="/icons/instagram.png" alt="instagram-logo" />
+            <span>Instagram</span>
         </a>
     </li>
     <li>
         <a href="https://www.tiktok.com/@gutibran" target="_blank">
             <img src="/icons/tiktok.png" alt="tiktok-logo" />
+            <span>TikTok</span>
         </a>
     </li>
     <li>
         <a href="https://www.youtube.com/@gutibran" target="_blank">
             <img src="/icons/youtube.png" alt="youtube-logo" />
+            <span>YouTube</span>
         </a>
     </li>
     <li>
         <a href="https://www.twitch.tv/gutibran" target="_blank">
             <img src="/icons/twitch.png" alt="twitch-logo" />
+            <span>Twitch</span>
         </a>
     </li>
     <li>
         <a href="https://odysee.com/@gutibran:1" target="_blank">
             <img src="/icons/odyssee.png" alt="odyssee-logo" />
+            <span>Odyssee</span>
         </a>
     </li>
     <li>
         <a href="https://videos.gutibran.com" target="_blank">
             <img src="/icons/peertube.png" alt="peertube-logo" />
+            <span>PeerTube</span>
         </a>
     </li>
     <li>
         <a href="https://gutibran.com/documents/rss.xml" target="_blank">
             <img src="/icons/rss.png" alt="rss-logo" />
+            <span>RSS Feed</span>
         </a>
     </li>
     <li>
         <a href="https://gutibran.com/documents/bitcoin-address.txt" target="_blank">
             <img src="/icons/bitcoin.png" alt="bitcoin-logo" />
+            <span>Bitcoin Address</span>
         </a>
     </li>
     <li>
         <a href="https://gutibran.com/documents/monero-address.txt" target="_blank">
             <img src="/icons/monero.png" alt="monero-logo" />
+            <span>Monero Address</span>
         </a>
     </li>
     <li>
         <a href="https://gutibran.com/documents/public-gpg-key.txt" target="_blank">
             <img src="/icons/key.png" alt="key-icon" />
+            <span>GPG Key (for secure email communication)</span>
         </a>
     </li>
 </ul>
