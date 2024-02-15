@@ -5,12 +5,14 @@
 
 /* DOCUMENT BACKGROUND COLOR */
 html {
-    background-color: #fafafa;
+    background-image: url("../images/wtf2.png");
 }
 
 /* PADDING AND MARGIN */
 body {
+    margin: 5%;
     padding: 2%;
+    background-color: white;
 }
 
 /* FONT SIZES */
