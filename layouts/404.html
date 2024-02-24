@@ -1,9 +1,5 @@
 {{ define "head" }}
-  <meta name="description" content="A webpage displaying error code 404 to tell the client that the requested web page was not found." />
+  <meta name="description" content="{{ .Description }}" />
 {{ end }}
 {{ define "main" }}
-  <main>
-      <h1>Error 404 - page not found</h1>
-      <a href="{{ "" | relURL }}">Go Home</a>
-  </main>
 {{ end }}
