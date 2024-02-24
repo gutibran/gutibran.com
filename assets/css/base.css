@@ -33,3 +33,63 @@
     font-weight: bold;
     font-style: normal;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 20%;
+    gap: 1em;
+    background-color: whitesmoke;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: ProximaNova-Regular, sans-serif;
+}
+
+p {
+    font-family: AGaramondPro-Regular, serif;
+}
+
+a {
+    font-family: AGaramondPro-Regular, serif;
+}
+
+header {
+    margin-top: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+nav a > img {
+    background-color: yellow;
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    flex-shrink: 0;
+    padding: 1em;
+}
+
+footer ul {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}

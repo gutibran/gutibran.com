@@ -1,7 +1,6 @@
-baseURL = 'https://gutibran.com/'
+baseURL = 'https://gutibran.com'
 languageCode = 'en-us'
-title = 'gutibran'
-
+title = "Brandon Gutierrez's web site"
 
 [markup]
   [markup.highlight]
