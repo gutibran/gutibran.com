@@ -1,6 +1,7 @@
 baseURL = 'https://gutibran.com'
 languageCode = 'en-us'
 title = "Brandon Gutierrez's web site"
+enableGitInfo = false
 
 [markup]
   [markup.highlight]
@@ -15,3 +16,5 @@ title = "Brandon Gutierrez's web site"
 [params]
   math = true
 
+[build]
+  drafts = true

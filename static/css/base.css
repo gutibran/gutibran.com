@@ -112,7 +112,29 @@ nav a > img {
 
 main {
     flex: 1;
-    margin-top: 2em;
+    margin-top: 1em;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1em;
+}
+
+.tags > ul > li > a {
+  text-decoration: underline;
+}
+
+.tags > ul > li > a:hover {
+  background-color: yellow;
+}
+
+.tags > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
 }
 
 p > em {
@@ -123,7 +145,6 @@ p > em {
 p > em:hover {
   background-color: yellow;  
 }
-
 
 a > em {
   font-style: italic;
@@ -154,6 +175,8 @@ footer ul {
     justify-content: center;
     align-items: center;
 }
+
+
 
 /* Responsive font sizes for smaller screens */
 @media screen and (max-width: 768px) {
