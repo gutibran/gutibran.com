@@ -52,6 +52,7 @@ body {
 
 h1 {
   font-size: 2rem; /* 32px */
+  margin: 1em 0;
 }
 
 h2 {
@@ -111,7 +112,26 @@ nav a > img {
 
 main {
     flex: 1;
-    margin-top: 4em;
+    margin-top: 2em;
+}
+
+p > em {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+p > em:hover {
+  background-color: yellow;  
+}
+
+
+a > em {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+a > em:hover {
+  background-color: yellow;  
 }
 
 main p > img {
