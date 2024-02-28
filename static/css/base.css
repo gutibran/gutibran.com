@@ -40,6 +40,11 @@ html {
     font-size: 16px;
 }
 
+.highlight {
+  font-family: monospace;
+  margin: 1em 0;
+}
+
 body {
     display: flex;
     flex-direction: column;

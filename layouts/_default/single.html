@@ -16,7 +16,10 @@
 </script>
 {{ end }}
 {{ end }}
-<div class="tags">
+    {{ with .Date }}
+      <p>Published on {{ dateFormat "Monday, January 2, 2006" . }}</p>
+    {{ end }}
+    <div class="tags">
   <span>tags:</span>
   <ul>
     {{ range .Params.tags }}
@@ -28,9 +31,6 @@
     {{ end }}
   </ul>
 </div>
-    {{ with .Lastmod }}
-      <p>Last updated on {{ dateFormat "Monday, January 2, 2006" . }}</p>
-    {{ end }}
 {{ end }}
 
 {{ .Content }}
