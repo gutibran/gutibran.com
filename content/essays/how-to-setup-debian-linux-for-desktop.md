@@ -143,3 +143,5 @@ echo "set hlsearch" >> ~/.config/nvim/init.vim
 echo "set tabstop=4" >> ~/.config/nvim/init.vim
 echo "set shiftwidth=4" >> ~/.config/nvim/init.vim
 echo "syntax on" >> ~/.config/nvim/init.vim
+
+Edit later
