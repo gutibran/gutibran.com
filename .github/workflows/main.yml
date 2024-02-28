@@ -31,13 +31,8 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /home/linuxuser/gutibran.com
+            cd /home/linuxuser/links.gutibran.com
             git fetch origin master
             git reset --hard FETCH_HEAD
             git clean -d -f --exclude secrets
-            cd /home/linuxuser/resume
-            pdflatex résumé.tex
-            cp /home/linuxuser/resume/résumé.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-résumé.pdf
-            cd /home/linuxuser/gutibran.com
-            hugo -D
             sudo nginx -s reload
