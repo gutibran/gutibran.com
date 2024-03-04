@@ -1,8 +1,92 @@
+/* GLOBAL VARIABLES */
+:root {
+  --primary-background-color: whitesmoke;
+  --primary-text-color: #1b1b1b;
+  --default-font-size: 16px;
+  --heading-font: ProximaNova-Bold;
+  --content-font: AGaramondPro-Regular; 
+}
+
+/* GLOBAL STYLES */
+html {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-size: var(--default-font-size);
+  line-height: 1.666rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+body {
+  margin: 0 8%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--content-font) ;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 2rem; /* Adjust h1 font size for smaller screens */
+}
+
+h2 {
+    font-size: 1.75rem; /* Adjust h2 font size for smaller screens */
+}
+
+h3 {
+    font-size: 1.5rem; /* Adjust h3 font size for smaller screens */
+}
+
+h4 {
+    font-size: 1.25rem; /* Adjust h4 font size for smaller screens */
+}
+
+h5 {
+    font-size: 1.125rem; /* Adjust h5 font size for smaller screens */
+}
+
+h6 {
+    font-size: 1rem; /* Adjust h6 font size for smaller screens */
+}
+
+p {
+    font-size: 0.875rem; /* Adjust p font size for smaller screens */
+}
+
+/* FONTS */
 /* Adobe Garamond Pro */
 @font-face {
     font-family: 'AGaramondPro-Regular';
     src: url('../fonts/adobegaramondpro/AGaramondPro-Regular.woff2') format('woff2'),
          url('../fonts/adobegaramondpro/AGaramondPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Adobe Garamond Pro Italic */
+@font-face {
+    font-family: 'AGaramondPro-Italic';
+    src: url('../fonts/adobegaramondpro/AGaramondPro-Italic.woff2') format('woff2'),
+         url('../fonts/adobegaramondpro/AGaramondPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Adobe Garamond Pro Bold */
+@font-face {
+    font-family: 'AGaramondPro-Bold';
+    src: url('../fonts/adobegaramondpro/AGaramondPro-Bold.woff2') format('woff2'),
+         url('../fonts/adobegaramondpro/AGaramondPro-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -34,166 +118,144 @@
     font-style: normal;
 }
 
-html {
-    background-color: whitesmoke;
-    color: #1b1b1b;
-    font-size: 16px;
+
+/* TOP HEADER */
+.top-header {
 }
 
-.highlight {
-  font-family: monospace;
-  margin: 1em 0;
+.top-nav-image {
+  display: block;
+  margin: 0 auto;
+  height: 64px;
+  width: 64px;
+  border-radius: 3px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0 20%;
-    gap: 1em;
-    line-height: 1.5;
-    font-size: 1rem;
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
-  font-size: 2rem; /* 32px */
-  margin: 1em 0;
+.top-nav-link-list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
-h2 {
-  font-size: 1.5rem; /* 24px */
+.top-nav-list-item {
+
 }
 
-h3 {
-  font-size: 1.25rem; /* 20px */
-}
-
-p {
-  margin-bottom: 1rem; /* Add spacing between paragraphs */
-}
-
-a {
-  color: #1b1b1b; /* Link color */
+.top-nav-link {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline; /* Underline links on hover for better feedback */
+/* MAIN CONTENT OF THE PAGE (main) */
+.content {
+  flex: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: ProximaNova-Regular, sans-serif;
+.content-image {
+  display: block;
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+  border-radius: 3px;
+  padding: 1em;
 }
 
-p {
-    font-family: AGaramondPro-Regular, serif;
+.content-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-a {
-    font-family: AGaramondPro-Regular, serif;
+.content-list-item {
 }
 
-header {
-    margin-top: 1em;
+.content-link {
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-}
-
-nav a > img {
-    background-color: yellow;
-    display: block;
-    height: 50px;
-}
-
-main {
-    flex: 1;
-    margin-top: 1em;
+.content-cover-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 1em;
 }
 
 .tags {
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  gap: 1em;
+  gap: 1rem;
 }
 
-.tags > ul > li > a {
-  text-decoration: underline;
+.tag-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.tags > ul > li > a:hover {
-  background-color: yellow;
+pre, code {
+  font-size: 12px;
+  overflow: auto;
 }
 
-.tags > ul {
+/* FOOTER (BOTTOM HEADER) */
+.footer {
+}
+
+.footer-link-list {
+  flex-shrink: 0;
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  justify-content: space-around;
+  align-items: center;
 }
 
-p > em {
-  font-style: italic;
-  text-decoration: underline;
-}
-
-p > em:hover {
-  background-color: yellow;  
-}
-
-a > em {
-  font-style: italic;
-  text-decoration: underline;
-}
-
-a > em:hover {
-  background-color: yellow;  
-}
-
-main p > img {
+.footer-icon {
   display: block;
   margin: 0 auto;
-  height: 200px;
-  width: 200px;
-  border-radius: 5px;
-  margin: 5em auto;
+  height: 16px;
+  width: 16px;
 }
 
-footer {
-    flex-shrink: 0;
-    padding: 1em;
-}
-
-footer ul {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-/* Responsive font sizes for smaller screens */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 0.9375rem; /* 15px */
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  body { 
+    margin: 0 16%;
   }
 
-  h1 {
-    font-size: 1.5rem; /* 24px */
+  .top-nav-image {
+    height: 128px;
+    width: 128px;
   }
 
-  h2 {
-    font-size: 1.25rem; /* 20px */
+  .footer-icon {
+    height: 32px;
+    width: 32px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body { 
+    margin: 0 32%;
+  }
+
+  .top-nav-image {
+    height: 128px;
+    width: 128px;
   }
 }

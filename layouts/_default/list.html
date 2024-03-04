@@ -3,10 +3,10 @@
 {{ end }}
 {{ define "main" }} 
    {{ .Content }}
-    <ul>
+    <ul class="content-list">
         {{ range .Pages }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .Date.Format "01-02-2006" }} | {{ .LinkTitle }}</a>
+        <li class="content-list-item">
+            <a class="content-link" href="{{ .RelPermalink }}">{{ .Date.Format "01-02-2006" }} | {{ .LinkTitle }}</a>
         </li>
         {{ end }}
     </ul>

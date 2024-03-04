@@ -2,10 +2,11 @@ baseURL = 'https://gutibran.com'
 languageCode = 'en-us'
 title = "Brandon Gutierrez's web site"
 enableGitInfo = false
+tableOfContents = true
 
 [markup]
   [markup.highlight]
-    style = "base16-black-metal-bathory"
+    style = "xcode"
   [markup.goldmark]
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
@@ -13,8 +14,16 @@ enableGitInfo = false
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['$', '$'], ['\(', '\)']]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 5
+    ordered = false
 [params]
   math = true
+  [params.images]
+    resampleFilter = "Lanczos"
+    quality = 85
+    format = "webp"
 
 [build]
   drafts = true

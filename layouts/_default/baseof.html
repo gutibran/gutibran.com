@@ -9,13 +9,12 @@
     <link rel="manifest" href="/favicons/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link href="/css/reset.css" rel="stylesheet" type="text/css" />
     <link href="/css/base.css" rel="stylesheet" type="text/css" />
     {{ block "head" . }}{{ end }}
 </head>
 <body>
     {{ partial "header.html" . }}
-    <main>
+    <main class="content">
     {{ block "main" . }}{{ end }}
     </main>
     {{ partial "footer.html" . }}

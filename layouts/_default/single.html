@@ -16,12 +16,13 @@
 </script>
 {{ end }}
 {{ end }}
+    <h1>{{ .Title }}</h1>
     {{ with .Date }}
       <p>Published on {{ dateFormat "Monday, January 2, 2006" . }}</p>
     {{ end }}
     <div class="tags">
   <span>tags:</span>
-  <ul>
+  <ul class="tag-list">
     {{ range .Params.tags }}
     <li>
       <a href="#">
@@ -31,6 +32,9 @@
     {{ end }}
   </ul>
 </div>
+<aside>
+  {{ .TableOfContents }}
+</aside>
 {{ end }}
 
 {{ .Content }}
