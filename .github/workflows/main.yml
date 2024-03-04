@@ -38,7 +38,11 @@ jobs:
             cd /home/linuxuser/resume
             pdflatex résumé.tex
             cp /home/linuxuser/resume/résumé.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-résumé.pdf
+<<<<<<< HEAD
             cd /home/linuxuser/gutibran.com
             rm -fr public
             hugo --gc --minify
+=======
+            hugo --minify
+>>>>>>> 3ffcc8188d84f7369b80a03c237aa00867f32c8e
             sudo nginx -s reload
