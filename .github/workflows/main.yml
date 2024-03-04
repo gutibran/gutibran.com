@@ -32,12 +32,12 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd /home/linuxuser/gutibran.com
+            rm -fr public
             git fetch origin master
             git reset --hard FETCH_HEAD
             git clean -d -f --exclude secrets
             cd /home/linuxuser/resume
             pdflatex résumé.tex
             cp /home/linuxuser/resume/résumé.pdf /home/linuxuser/gutibran.com/static/brandon-gutierrez-résumé.pdf
-            rm -fr /home/linuxuser/gutibran.com/public
             hugo --gc --minify
             sudo nginx -s reload
