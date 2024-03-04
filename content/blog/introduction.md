@@ -1,7 +1,7 @@
 ---
 date: '2024-03-04T02:33:22-06:00'
 title: 'Introduction'
-draft: true
+draft: false
 tags: [self]
 description: "My written introduction to the internet."
 toc: true
