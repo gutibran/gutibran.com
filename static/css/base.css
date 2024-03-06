@@ -63,6 +63,10 @@ p {
     font-size: 1rem; /* Adjust p font size for smaller screens */
 }
 
+.MathJax {
+  font-size: 100% !important;
+}
+
 /* FONTS */
 /* Adobe Garamond Pro */
 @font-face {
@@ -155,6 +159,9 @@ p {
 }
 
 /* MAIN CONTENT OF THE PAGE (main) */
+.blog-post-content {
+}
+
 .content {
   flex: 1;
 }

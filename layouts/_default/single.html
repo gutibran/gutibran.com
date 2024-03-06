@@ -1,42 +1,49 @@
 {{ define "head" }}
-<meta name="description" content={{ .Description }} />
-{{ end }}
-{{ define "main" }}
-{{ if .Params.tags }}
-{{ range .Params.tags }}
-{{ if or (eq . "math") (eq . "algorithms") (eq . "computer science") }}
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-<script>
-  MathJax = {
-    tex: {
-      displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
-      inlineMath: [['\\(', '\\)'], ['$', '$']],     // inline
-    }
-  };
-  console.log("Hello, friend!")
-</script>
-{{ end }}
-{{ end }}
-    <h1>{{ .Title }}</h1>
-    {{ with .Date }}
-      <p>Published on {{ dateFormat "Monday, January 2, 2006" . }}</p>
-    {{ end }}
-    <div class="tags">
-  <span>tags:</span>
-  <ul class="tag-list">
+  <meta name="description" content={{ .Description }} />
+  
+  {{ if .Params.tags }}
     {{ range .Params.tags }}
-    <li>
-      <a href="#">
-        {{ . }}
-      </a>
-    </li>
+      {{ if or (eq . "math") (eq . "algorithms") (eq . "computer science") }}
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <script>
+          MathJax = {
+            tex: {
+              displayMath: [['\\[', '\\]'], ['$$', '$$']],  // block
+              inlineMath: [['\\(', '\\)'], ['$', '$']],     // inline
+            }
+          };
+          console.log("Hello, friend!")
+        </script>
+      {{ end }}
     {{ end }}
-  </ul>
-</div>
-<aside>
-  {{ .TableOfContents }}
-</aside>
+  {{ end }}
 {{ end }}
 
-{{ .Content }}
+
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Date }}
+    <p>Published on {{ dateFormat "Monday, January 2, 2006" . }}</p>
+  {{ end }}
+
+  <div class="tags">
+    <span>tags:</span>
+    <ul class="tag-list">
+      {{ range .Params.tags }}
+        <li>
+          <a href="#">
+            {{ . }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+  <aside>
+    {{ .TableOfContents }}
+  </aside>
+
+  <article class="blog-post-content">
+    {{ .Content }}
+  </article>
 {{ end }}
