@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = "Brandon Gutierrez's web site"
 enableGitInfo = false
 tableOfContents = true
+copyright = '© 2023 ABC Widgets, Inc.'
 
 [markup]
   [markup.highlight]
@@ -24,6 +25,17 @@ tableOfContents = true
     resampleFilter = "Lanczos"
     quality = 85
     format = "webp"
+  [params.author]
+    email = 'bran09123@gmail.com'
+    name = 'Brandon Gutierrez'
+
+[outputFormats.RSS]
+  mediatype = "application/rss+xml"
+  baseName = "gutibrans-blog"
+  isHTML = false
+
+[outputs]
+  home = [ "HTML", "RSS" ]
 
 [build]
   drafts = true

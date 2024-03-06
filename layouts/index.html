@@ -1,0 +1,10 @@
+{{ define "head" }}
+  <meta name="description" content={{ .Description }} />
+{{ end }}
+
+
+{{ define "main" }}
+  <article class="blog-post-content">
+    {{ .Content }}
+  </article>
+{{ end }}

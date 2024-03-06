@@ -21,4 +21,10 @@ toc: true
 
 ## Explanation
 
+### Algorithm
+
+
+### Video
+
 # Resources
+- [LeetCode Problem X: Y]()

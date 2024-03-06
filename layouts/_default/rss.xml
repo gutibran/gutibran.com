@@ -1,0 +1,20 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ .Site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Brandon Gutierrez's blog RSS feed. Automatically updated on every site build.</description>
+    <atom:link href="{{ .Permalink }}index.xml" rel="self" type="application/rss+xml" />
+    <pubDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+
+    {{ range where .Site.RegularPages "Type" "in" (slice "blog") }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      <description>{{ with .Params.description }}{{ . | html }}{{ else }}{{ .Summary | html }}{{ end }}</description>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      <guid isPermaLink="true">{{ .Permalink }}</guid>
+    </item>
+    {{ end }}
+  </channel>
+</rss>

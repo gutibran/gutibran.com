@@ -4,7 +4,7 @@ title: 'Index'
 draft: false
 tags: []
 description: "The index (home) page of gutibran.com."
-layout: "single"
+layout: "index"
 ---
 
 {{< rawhtml >}}
