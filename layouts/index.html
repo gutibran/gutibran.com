@@ -1,0 +1,83 @@
+{{ define "head" }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+{{ end }}
+{{ define "main" }}
+<section class="hero">
+    <div class="hero-left">
+        <img class="hero-image-static" src="/images/headshot.webp" alt="brandon-gutierrez">
+        <div class="hero-text">
+            <h1>Brandon Gutierrez</h1>
+            <p>I'm studying electrical engineering and applied mathematics at Texas State
+                University in San Marcos, Texas.</p>
+            <div class="hero-gpus">
+                <img class="hero-image" src="/images/nvidia-4090.webp" alt="nvidia-4090">
+                <img class="hero-image" src="/images/nvidia-4090.webp" alt="nvidia-4090">
+                <img class="hero-image" src="/images/nvidia-4090.webp" alt="nvidia-4090">
+                <img class="hero-image" src="/images/nvidia-4090.webp" alt="nvidia-4090">
+                <img class="hero-image" src="/images/nvidia-4090.webp" alt="nvidia-4090">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="recent-notes">
+    <div class="section-header">
+        <h2>Recent Notes</h2>
+        <a class="view-all-button" href="/notes">View all</a>
+    </div>
+    <ul class="content-listing">
+        {{ range first 6 (where .Site.Pages "Section" "notes") }}
+        {{ if ne .Name "Notes" }}
+        <li>
+            <a class="content-link" href="{{ .Permalink }}">
+                <span  class="content-title">{{ .Params.Title }}</span>
+                <span>{{ .Params.Date.Format "Jan 2, 2006" }}</span>
+            </a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</section>
+<section class="recent-videos">
+    <div class="section-header">
+        <h2>Recent Videos</h2>
+        <a class="view-all-button" href="/videos">View all</a>
+    </div>
+    <ul class="content-listing">
+        {{ range where .Site.Pages "Section" "notes" }}
+        {{ if and (ne .Name "Notes") (ne .Params.videoURL "") }}
+        <li>
+            <a class="content-link" href="{{ .Params.videoURL }}">
+                <span  class="content-title">{{ .Params.videoTitle }}</span>
+                <span>{{ .Params.Date.Format "Jan 2, 2006" }}</span>
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+        {{ range where .Site.Pages "Section" "projects" }}
+        {{ if and (ne .Name "Projects") (ne .Params.videoURL "") }}
+        <li>
+            <a class="content-link" href="{{ .Params.videoURL }}">
+                <span  class="content-title">{{ .Params.videoTitle }}</span>
+                <span>{{ .Params.Date.Format "Jan 2, 2006" }}</span>
+            </a>
+        </li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</section>
+<section class="recent-projects">
+    <div class="section-header">
+        <h2>Recent Projects</h2>
+        <a class="view-all-button" href="/projects">View all</a>
+    </div>
+    <ul class="content-listing">
+        {{ range where .Site.Pages "Section" "projects" }}
+        {{ if ne .Name "Projects" }}
+        <li><a class="content-link" href="{{ .Permalink }}">
+                <span class="content-title">{{ .Params.Title }}</span>
+                <span>{{ .Params.Date.Format "Jan 2, 2006" }}</span>
+            </a></li>
+        {{ end }}
+        {{ end }}
+    </ul>
+</section>
+{{ end }}

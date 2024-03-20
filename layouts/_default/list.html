@@ -1,13 +1,9 @@
-{{ define "head" }}
-  <meta name="description" content={{ .Description }} />
-{{ end }}
-{{ define "main" }} 
-   {{ .Content }}
-    <ul class="content-list">
+{{ define "main" }}
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    <ul>
         {{ range .Pages }}
-        <li class="content-list-item">
-            <a class="content-link" href="{{ .RelPermalink }}">{{ .Date.Format "01-02-2006" }} | {{ .LinkTitle }}</a>
-        </li>
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
 {{ end }}

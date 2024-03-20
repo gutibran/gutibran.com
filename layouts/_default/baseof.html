@@ -1,22 +1,75 @@
-<!-- layouts/_default/baseof.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
     <link rel="manifest" href="/favicons/site.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link href="/css/base.css" rel="stylesheet" type="text/css" />
     {{ block "head" . }}{{ end }}
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/base.css" defer>
+    {{ if .Param "math" }}
+    {{ partialCached "mathjax.html" . }}
+    {{ end }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content={{ .Description }} />
 </head>
+
 <body>
-    {{ partial "header.html" . }}
-    <main class="content">
-    {{ block "main" . }}{{ end }}
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/notes">Notes</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/videos">Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer.html" . }}
+    <footer>
+        <img class="footer-icon" src="/images/nvidia-a100.webp" alt="nvidia-a100">
+        <ul class="footer-links">
+            <li>
+                <a href="https://github.com/gutibran" target="_blank">
+                    <img class="footer-link-icon" src="/icons/github-icon.svg" alt="github-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/gutibran" target="_blank">
+                    <img class="footer-link-icon" src="/icons/linkedin-icon.svg" alt="linkedin-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/gutibran" target="_blank">
+                    <img class="footer-link-icon" src="/icons/twitter-icon.svg" alt="twitter-icon">
+                </a>
+            </li>
+        </ul>
+        <!-- 
+        <ul class="footer-links">
+            <li>
+                <a>
+                    <img class="footer-link-icon" src="/icons/nvidia-icon.svg" alt="nvidia-icon">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="footer-link-icon" src="/icons/claude-ai-icon.svg" alt="claude-ai-icon">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="footer-link-icon" src="/icons/openai-2.svg" alt="openai-icon">
+                </a>
+            </li>
+        </ul>
+        -->
+    </footer>
 </body>
+
 </html>

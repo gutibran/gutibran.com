@@ -1,8 +1,13 @@
 ---
-date: '{{ .Date }}'
-title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
 draft: true
 tags: []
 description: ""
-toc: true
+videoURL: ""
+videoTitle: ""
+projectTitle: ""
+toc: false
+layout: ""
 ---
+

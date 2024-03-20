@@ -1,2 +1,1 @@
 # gutibran.com
-Personal website.
